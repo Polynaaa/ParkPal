@@ -1,112 +1,92 @@
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image'
+import hi5 from '@/public/hifive.svg'
+import lightbulb from '@/public/lightbulb.svg'
+import headph from '@/public/headphonescs.svg'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main >
+      <div className="w-full h-14 bg-white">
+      </div>
+
+      {/* Banner - gradient */}
+
+      <div className="w-full h-96 bg-texture">
+        <div className='w-full h-96 z-10 flex flex-col justify-center items-center gap-8'>
+          <p className='text-white text-5xl font-bold'>Find the perfect parking spot</p>
+          <button className='bg-white px-10 py-3 rounded-full font-semibold text-lg text-[#4c6583]'>Learn more</button>
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+
+      {/* Infographics 
+      TODO: logos, text
+      */}
+      <p className='w-full px-32 py-10 text-4xl '>About MyParkPal</p>
+      <div className='w-full h-96 px-32 grid grid-cols-3 gap-20'>
+        <div className='flex flex-col justify-start space-y-2'>
+          <p className='text-2xl'>Our Vision</p>
+          <p className=' text-[#183456] text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices euismod sodales. Proin sit amet convallis ipsum. Ut sollicitudin diam a ex lobortis accumsan. Curabitur ligula ante, rutrum quis feugiat at, congue eu nisi. Vestibulum venenatis, diam non elementum eleifend, ex ex rhoncus magna, et fermentum risus turpis eu turpis. Ut sed pellentesque leo. Cras at massa augue.</p>
+          <div className='w-full flex justify-center p-4'>
+            <Image
+              className='w-1/4 h-auto'
+              src={lightbulb}
+              alt='map logo'
+            />
+          </div>
+        </div>
+
+        <div className='flex flex-col justify-start space-y-2'>
+          <p className='text-2xl'>Our Partnerships</p>
+          <p className=' text-[#183456] text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices euismod sodales. Proin sit amet convallis ipsum. Ut sollicitudin diam a ex lobortis accumsan. Curabitur ligula ante, rutrum quis feugiat at, congue eu nisi. Vestibulum venenatis, diam non elementum eleifend, ex ex rhoncus magna, et fermentum risus turpis eu turpis. Ut sed pellentesque leo. Cras at massa augue.</p>
+          <div className='w-full flex justify-center p-4'>
+            <Image
+              className='w-1/4 h-auto'
+              src={hi5}
+              alt='map logo'
+            />
+          </div>
+        </div>
+
+        <div className='flex flex-col justify-start space-y-2'>
+          <p className='text-2xl'>Our Customer Service</p>
+          <p className=' text-[#183456] text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices euismod sodales. Proin sit amet convallis ipsum. Ut sollicitudin diam a ex lobortis accumsan. Curabitur ligula ante, rutrum quis feugiat at, congue eu nisi. Vestibulum venenatis, diam non elementum eleifend, ex ex rhoncus magna, et fermentum risus turpis eu turpis. Ut sed pellentesque leo. Cras at massa augue.</p>
+          <div className='w-full flex justify-center p-4'>
+            <Image
+              className='w-1/4 h-auto'
+              src={headph}
+              alt='map logo'
+            />
+          </div>
+        </div>
+
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* New section
+      TODO: text, footer
+      */}
+      <div className="w-full h-80 bg-texture mt-10">
+        <div className='w-full h-80 z-10 flex flex-col justify-center items-center gap-8 text-center text-white text-3xl font-normal'>
+          <p className='w-1/2'>Discover the perfect parking solution. Uncover and pay for parking spaces to fit your needs.</p>
+          <p className='w-1/2'>"It's your journey. We make it hassle-free."</p>
+        </div>
+      </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className='w-full h-auto bg-gray-200 p-20'>
+        <div className='w-full h-auto flex justify-center space-x-4 text-2xl'>
+          <p className=''>Download the free App </p>
+          <a className='text-blue-950 underline' href='#'>Android</a>
+          <a className='text-blue-950 underline' href='#'>Apple</a>
+        </div>
+        <div className='mt-10 w-full h-52 flex flex-col items-center space-y-4'>
+          <p className='text-2xl'>Subscribe</p>
+          <p>Simplify finding and paying for parking spaces with us today.</p>
+          <form className='flex flex-col w-1/4 items-center space-y-4'>
+            <input className='py-2 px-4 rounded-full' placeholder='Email Address'></input>
+            <button className='w-1/3 bg-[#183456] text-white py-2 px-4 rounded-full'>Sign up</button>
+          </form>
+        </div>
       </div>
     </main>
   );
