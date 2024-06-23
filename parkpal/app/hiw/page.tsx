@@ -7,7 +7,10 @@ export default function Howitworks() {
     <div>
       <div className="w-full h-14 bg-white">
       </div>
-      <p>How it works page</p>
+      <div className='w-full h-40 px-72 py-10 text-lg text-blue-950 flex justify-center items-center'>
+        <p>Page is currently in development ...</p>
+      </div>
+
     </div>
   )
 }
