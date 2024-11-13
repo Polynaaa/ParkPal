@@ -1,6 +1,6 @@
 <h1>ParkPal</h1>
 <br>
-<h3>Next.js / React Eamil / Resend / Typescript / </h3>
+<h3>Next.js / React Email / Resend / Typescript / </h3>
 <p>Application that helps to find out about a new parking startup and allows to easily contact the company using React Email and Resend</p>
 <br>
 
