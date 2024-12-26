@@ -1,5 +1,5 @@
 "use server"
-import { Resend} from 'resend';
+import {Resend} from 'resend';
 import Emails from "@/app/emails/Emails";
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -9,9 +9,11 @@ export async function POST(req: NextRequest) {
     try {
         const { firstName, lastName, senderEmail, message } = await req.json();
 
+        const recipientEmail: string = process.env.RECIPIENT_EMAIL || "";
+
         const emailData = {
             from: 'ParkPal Test <onboarding@resend.dev>',
-            to: process.env.RECIPIENT_EMAIL,
+            to: recipientEmail,
             subject: 'New message',
             reply_to: senderEmail,
             react: Emails({ firstName, lastName, senderEmail, message }),
