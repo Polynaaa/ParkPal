@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
 
         const emailData = {
             from: 'ParkPal Test <onboarding@resend.dev>',
-            to: 'polina18102001@outlook.com',
+            to: process.env.RECIPIENT_EMAIL,
             subject: 'New message',
             reply_to: senderEmail,
             react: Emails({ firstName, lastName, senderEmail, message }),
