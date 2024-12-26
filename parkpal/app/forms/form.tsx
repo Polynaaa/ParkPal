@@ -61,7 +61,7 @@ const Form: React.FC = () => {
 
     return (
         <div className='w-1/2'>
-                <form className='flex flex-col w-full justify-center bg-gray-200 p-10 rounded-md' onSubmit={handleSubmit}>
+                <form className='flex flex-col w-full justify-center bg-gray-100 p-10 rounded-md ' onSubmit={handleSubmit}>
                     <div className='flex justify-between space-x-4'>
                         <div className='flex flex-col w-1/2'>
                             <label>First Name</label>
